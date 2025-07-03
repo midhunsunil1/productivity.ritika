@@ -1,6 +1,3 @@
-Age,Gender,Daily_Minutes_Spent,Feels_Overuse,Would_Subscribe,Pay_Amount,Posts_Per_Day,Likes_Per_Day,Feature_Usage_tracking,Feature_App_blocking
-22,Female,180,Yes,Yes,5,3,150,1,1
-30,Male,75,No,No,0,1,50,0,0
-27,Female,140,Yes,Maybe,2,2,120,1,1
-35,Male,60,No,Yes,7,1,40,1,0
-19,Female,220,Yes,Yes,6,4,200,1,1
+Age,Gender,Monthly_Income,Daily_Minutes_Spent,Pay_Amount,Would_Subscribe,Feature_Usage_tracking
+25,Male,3000,120,5,Yes,1
+30,Female,4000,200,8,No,0
