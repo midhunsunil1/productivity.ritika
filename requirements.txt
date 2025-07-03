@@ -1,1 +1,8 @@
-streamlit\npandas\nnumpy\nscikit-learn\nplotly\nmlxtend
+streamlit==1.35.0
+pandas==2.2.2
+numpy==1.26.4
+scipy==1.12.0
+scikit-learn==1.5.0
+plotly==5.22.0
+mlxtend==0.23.1
+seaborn==0.13.2
