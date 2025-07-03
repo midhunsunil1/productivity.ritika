@@ -1,8 +1,1 @@
-streamlit
-pandas
-numpy
-scikit-learn
-matplotlib
-seaborn
-plotly
-mlxtend
+streamlit\npandas\nnumpy\nscikit-learn\nplotly\nmlxtend

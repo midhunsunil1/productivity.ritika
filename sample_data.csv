@@ -1,3 +1,5 @@
 Age,Gender,Monthly_Income,Daily_Minutes_Spent,Pay_Amount,Would_Subscribe,Feature_Usage_tracking
-25,Male,3000,120,5,Yes,1
-30,Female,4000,200,8,No,0
+25,Male,3000,120,5,1,1
+30,Female,4000,200,8,0,0
+28,Female,2500,160,3,0,1
+35,Male,4500,90,10,1,1
