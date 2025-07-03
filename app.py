@@ -299,6 +299,7 @@ with tab_arm:
 # ==============================================
 # Regression Tab
 # ==============================================
+
 with tab_reg:
     st.header("📈 Regression Models")
     if not numeric_cols:
@@ -343,3 +344,20 @@ with tab_reg:
                               x1=y_test_r.max(), y1=y_test_r.max(),
                               line=dict(dash='dash'))
             st.plotly_chart(fig_reg, use_container_width=True)
+
+            # ---- Prediction on user-upload data ----
+            st.markdown("### Predict Pay Amount (or selected target) on New Data")
+            reg_upload = st.file_uploader("Upload CSV with 4–5 new data points (exclude target column):", type=["csv"], key="reg_uploader")
+            pred_model_select = st.selectbox("Model for prediction:", list(reg_models.keys()), key="pred_model_reg")
+            if reg_upload is not None:
+                new_data = pd.read_csv(reg_upload)
+                new_proc = pd.get_dummies(new_data, drop_first=True)
+                # Align to training columns
+                new_proc = new_proc.reindex(columns=X_reg.columns, fill_value=0)
+                preds_new = reg_models[pred_model_select].predict(new_proc)
+                new_data[f"Predicted_{target_num}"] = np.round(preds_new, 2)
+                st.subheader("Predictions")
+                st.dataframe(new_data)
+                csv_download = new_data.to_csv(index=False).encode('utf-8')
+                st.download_button("Download Predictions CSV", data=csv_download,
+                                   file_name="reg_predictions.csv", mime="text/csv")
